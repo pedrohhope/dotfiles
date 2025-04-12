@@ -1,0 +1,17 @@
+theme = catppuccin-frappe
+font-family = JetBrains Mono
+font-size = 10
+background-opacity = 0.95
+gtk-titlebar = false
+
+keybind = super+ctrl+c=close_surface
+
+keybind = super+ctrl+j=new_split:down
+keybind = super+ctrl+k=new_split:up
+keybind = super+ctrl+h=new_split:left
+keybind = super+ctrl+l=new_split:right
+
+keybind = super+ctrl+shift+j=goto_split:bottom
+keybind = super+ctrl+shift+k=goto_split:top
+keybind = super+ctrl+shift+h=goto_split:left
+keybind = super+ctrl+shift+l=goto_split:right
