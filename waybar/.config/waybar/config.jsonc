@@ -22,7 +22,8 @@
     "sort-by-name": true,
     "format": " {icon} {name} ",
     "format-icons": {
-      "default": ""
+      "default": "",
+      "active": ""
     }
   },
   "tray": {
@@ -41,8 +42,8 @@
   "clock": {
     "timezone": "America/Sao_Paulo",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": " {:%d/%m/%Y}",
-    "format": " {:%H:%M}"
+    "format-alt": " {:%d/%m/%Y}",
+    "format": "  {:%H:%M}"
   },
   "backlight": {
     "device": "intel_backlight",
@@ -65,22 +66,21 @@
       "critical": 15
     },
     "format": "{icon}",
-    "format-charging": "",
-    "format-plugged": "",
+    "format-charging": "󰂄", // Battery charging
+    "format-plugged": "󰂄", // Plugged in
     "format-alt": "{icon}",
     "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
+      "󰂃", // 0% (empty)
+      "󰁺", // 10%
+      "󰁻", // 20%
+      "󰁼", // 30%
+      "󰁽", // 40%
+      "󰁾", // 50%
+      "󰁿", // 60%
+      "󰂀", // 70%
+      "󰂁", // 80%
+      "󰂂", // 90%
+      "󰁹" // 100% (full)
     ]
   },
   "pulseaudio": {
@@ -104,6 +104,6 @@
   "custom/power": {
     "tooltip": false,
     "on-click": "wlogout &",
-    "format": "襤"
+    "format": "⏻"
   }
 }
