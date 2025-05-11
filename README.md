@@ -1,7 +1,3 @@
-Okay, here's the revised documentation, explaining that everything is themed by Catppuccin and written entirely in English:
-
----
-
 ### Dotfiles Setup Guide (Arch Linux - Using yay or pacman)
 
 Welcome! This guide will help you set up your environment using these dotfiles on Arch Linux. This guide primarily uses `yay` (Yet Another Yogurt) as the package manager, which is an AUR (Arch User Repository) helper. If you prefer, you can use `pacman`, the default package manager for Arch Linux, for most steps. Follow the instructions below to clone the repository, install the required fonts and applications, and then stow the configuration files.
