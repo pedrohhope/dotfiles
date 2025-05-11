@@ -85,7 +85,7 @@ This setup is designed to be themed with [Catppuccin](https://catppuccin.com/), 
     yay -S spicetify-cli
     ```
 
-**Vesktop:**
+**Vesktop ( Discord Alternative ):**
 
 ```sh
 yay -S vesktop
