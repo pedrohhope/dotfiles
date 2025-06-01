@@ -28,7 +28,7 @@ If you don't have `yay` installed, you can install it using the following steps:
 #### 1. Clone the Repository
 
 ```sh
-https://github.com/pedrohhope/dotfiles.git ~/dotfiles
+git clone https://github.com/pedrohhope/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ```
 
