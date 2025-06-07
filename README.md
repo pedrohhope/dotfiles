@@ -1,118 +1,112 @@
-### Dotfiles Setup Guide (Arch Linux - Using yay or pacman)
+# 🏠 Dotfiles
 
-Welcome! This guide will help you set up your environment using these dotfiles on Arch Linux. This guide primarily uses `yay` (Yet Another Yogurt) as the package manager, which is an AUR (Arch User Repository) helper. If you prefer, you can use `pacman`, the default package manager for Arch Linux, for most steps. Follow the instructions below to clone the repository, install the required fonts and applications, and then stow the configuration files.
+A clean and minimal Arch Linux desktop configuration featuring Hyprland, Waybar, and Catppuccin theming.
 
-#### Installing yay (Optional)
+## ✨ Features
 
-If you don't have `yay` installed, you can install it using the following steps:
+- **Window Manager**: Hyprland (Wayland compositor)
+- **Status Bar**: Waybar with custom modules
+- **Terminal**: Kitty with custom theming
+- **App Launcher**: Wofi
+- **Lock Screen**: Hyprlock
+- **Theme**: Catppuccin (dark theme)
+- **Font**: JetBrains Mono Nerd Font
+- **Shell**: Fish with custom functions and aliases
+- **Shell Prompt**: Starship
 
-1.  **Install `git` and `base-devel`:**
+## 📋 Requirements
 
-    ```sh
-    sudo pacman -S git base-devel
-    ```
+- Arch Linux (or Arch-based distribution)
+- Git
+- GNU Stow
 
-2.  **Clone the `yay` repository:**
+## 🚀 Quick Start
 
-    ```sh
-    git clone https://aur.archlinux.org/yay.git
-    cd yay
-    ```
+### 1. Install yay (AUR helper)
 
-3.  **Build and install `yay`:**
+```bash
+sudo pacman -S git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay && makepkg -si
+```
 
-    ```sh
-    makepkg -si
-    ```
+### 2. Clone the Repository
 
-#### 1. Clone the Repository
-
-```sh
+```bash
 git clone https://github.com/pedrohhope/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ```
 
-#### 2. Install GNU Stow
+### 3. Install Dependencies
 
-```sh
-sudo pacman -S stow
-```
-
-OR
-
-```sh
+```bash
+# Core utilities
 yay -S stow
-```
 
-#### 3. Install Required Applications
+# Desktop environment
+yay -S hyprland hyprlock hyprpaper waybar kitty wofi starship fish
 
-```sh
-yay -S waybar hyprland hyprlock hyprpaper kitty wofi
-```
-
-#### 4. Install JetBrains Mono Nerd Font
-
-```sh
+# Install JetBrains Mono Nerd Font
 mkdir -p ~/.local/share/fonts
 wget -O JetBrainsMono.zip "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip"
 unzip JetBrainsMono.zip -d ~/.local/share/fonts
 fc-cache -fv
 ```
 
-#### 5. (Optional) Configure Additional Applications & Themes
+### 4. Deploy Configurations
 
-This setup is designed to be themed with [Catppuccin](https://catppuccin.com/), a community-driven pastel theme that supports a wide range of applications. The following applications can be themed using Catppuccin:
+```bash
+stow hyprland waybar kitty wofi hyprlock starship fish backgrounds
+```
 
-**Zen Browser:**
+### 5. Post-Installation
 
--   Install Zen Browser:
+1. **Set Fish as default shell**: `chsh -s /usr/bin/fish`
+2. **Logout and log back in** to apply the new configuration
+3. **Select Hyprland** as your session in your display manager
+4. **Enjoy your new setup!**
 
-    ```sh
-    yay -S zen-browser-bin
-    ```
+## 🎨 Optional Applications
 
-**Spotify:**
+The setup works great with these Catppuccin-themed applications:
 
--   Install Spotify:
+```bash
+# Web Browser
+yay -S zen-browser-bin
 
-    ```sh
-    yay -S spotify-launcher
-    ```
+# Media
+yay -S spotify-launcher spicetify-cli
 
--   Install Spicetify CLI:
-
-    ```sh
-    yay -S spicetify-cli
-    ```
-
-**Vesktop ( Discord Alternative ):**
-
-```sh
+# Communication
 yay -S vesktop
 ```
 
-**Figma Font Helper:**  
-Download and install from [Figma’s official site](https://www.figma.com/downloads/).
+## 📁 Configuration Structure
 
-#### 6. Stow the Dotfiles
-
-Now that the applications are installed, use `stow` to symlink the configuration files to your home directory:
-
-```sh
-stow waybar
-stow hyprlock
-stow hyprland
-stow hyprpaper
-stow kitty
-stow starship
-stow wofi
-stow backgrounds
+```
+~/dotfiles/
+├── hyprland/     # Window manager config
+├── waybar/       # Status bar config
+├── kitty/        # Terminal emulator config
+├── wofi/         # Application launcher config
+├── hyprlock/     # Lock screen config
+├── starship/     # Shell prompt config
+├── backgrounds/  # Wallpapers
+└── scripts/      # Utility scripts
 ```
 
-Repeat for any other directories you want to stow.
+## 🔧 Customization
 
-#### 7. Final Steps
+- **Wallpapers**: Add your wallpapers to `backgrounds/` directory
+- **Keybindings**: Edit `hyprland/.config/hypr/hyprland.conf`
+- **Fish aliases**: Edit `fish/.config/fish/config.fish`
+- **Fish functions**: Add custom functions in `fish/.config/fish/functions/`
+- **Colors**: All configurations use Catppuccin color scheme
 
-After installing everything, restart your session or reload your configuration as needed. Enjoy your new setup!
+## 📝 License
 
-For any issues or questions, please open an issue on this repository.
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+**Issues?** Open an issue on this repository for help!
