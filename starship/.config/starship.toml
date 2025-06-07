@@ -26,7 +26,7 @@ $time\
 [ ](fg:purple)\
 $line_break$character"""
 
-palette = 'catppuccin_mocha'
+palette = 'custom_silver'
 
 [palettes.gruvbox_dark]
 color_fg0 = '#fbf1c7'
@@ -39,6 +39,29 @@ color_orange = '#d65d0e'
 color_purple = '#b16286'
 color_red = '#cc241d'
 color_yellow = '#d79921'
+
+[palettes.custom_silver]
+primary = "#c0c0c0"
+accent = "#e8e8e8"
+text = "#f5f5f5"
+subtext1 = "#e0e0e0"
+subtext0 = "#c0c0c0"
+overlay2 = "#808080"
+overlay1 = "#606060"
+overlay0 = "#404040"
+surface2 = "#303030"
+surface1 = "#202020"
+surface0 = "#141414"
+base = "#0a0a0a"
+mantle = "#050505"
+crust = "#000000"
+peach = "#c0c0c0"
+green = "#51cf66"
+teal = "#22d3ee"
+blue = "#339af0"
+purple = "#f06292"
+red = "#ff6b6b"
+yellow = "#ffd43b"
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"

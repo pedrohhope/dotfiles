@@ -1,0 +1,14 @@
+@define-color primary #c0c0c0;
+@define-color accent #e8e8e8;
+@define-color text #f5f5f5;
+@define-color subtext1 #e0e0e0;
+@define-color subtext0 #c0c0c0;
+@define-color overlay2 #808080;
+@define-color overlay1 #606060;
+@define-color overlay0 #404040;
+@define-color surface2 rgba(48, 48, 48, 0.7);
+@define-color surface1 rgba(32, 32, 32, 0.8);
+@define-color surface0 rgba(20, 20, 20, 0.9);
+@define-color base rgba(10, 10, 10, 0.95);
+@define-color mantle rgba(5, 5, 5, 0.98);
+@define-color crust rgba(0, 0, 0, 1);
