@@ -8,7 +8,7 @@
 }
 
 #window {
-    background: @surface0;
+    background: rgba(20, 20, 20, 0.8);
     border: 1px solid rgba(192, 192, 192, 0.3);
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6),
