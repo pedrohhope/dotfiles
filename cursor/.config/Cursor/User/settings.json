@@ -1,0 +1,9 @@
+{
+    "window.commandCenter": true,
+    "workbench.colorCustomizations": {},
+    "workbench.colorTheme": "GitHub Dark",
+    "apc.imports": [
+        "file:///home/pedrovitorsouzabaioccocruz/.cursor/extensions/brandonkirbyson.vscode-animations-2.0.1-universal/dist/updateHandler.js"
+    ],
+    "workbench.iconTheme": "material-icon-theme"
+}
